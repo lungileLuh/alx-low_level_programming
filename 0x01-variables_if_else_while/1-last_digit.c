@@ -2,32 +2,30 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - annoying
+ * main - program that prints the status of the last digit number
  *
- * Return: 0
+ * Return: return 0
  */
 int main(void)
 {
-	int n;
-	int x,
+	int n, lastNumber;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	x = n % 10,
-	printf("Last digit of %d is %d", n, x),
+	lastNumber = n % 10;
 
-if (x > 5),
-{
-	printf("and is greater than 5"),
-}
-	if (x == 0)
+	if (lastNumber > 5)
 	{
-		printf("and is 0"),
+		printf("Last digit of %d is %d and is greater than 5\n", n, lastNumber);
 	}
-	if (x < 6 && x != 0")
+	else if (lastNumber == 0)
 	{
-		printf("and is less than 6 and not 0"),
+		printf("Last digit of %d is %d and is 0\n", n, lastNumber);
 	}
-	printf("\n"),
-	return (0)
+	else if (lastNumber < 6)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0", n, lastNumber);
+		printf("\n");
+	}
+	return (0);
 }
