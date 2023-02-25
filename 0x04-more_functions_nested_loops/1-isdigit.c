@@ -1,18 +1,16 @@
 #include "main"
-
 /**
  * _isdigit - check if numbers are 0 - 9
- * @c: char to be checked
- *
+ * @c: char to check
  * Return: 0 or 1
  */
 int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-	{
-	return (1);
-	}
+
+	        return (1);
 	else
-	return (0);
-}
+	        return (0);
+}	
+
 
