@@ -13,7 +13,7 @@ int main(void)
 {
 	int pass[100];
 
-	int, sum, n;
+	int i,  sum, n;
 
 	sum = 0;
 
@@ -23,8 +23,8 @@ int main(void)
 
 	{
 		pass[i] = rand() % 78;
-		sum + = (pass[i] + '0');
-		putcha(pass[i] + '0');
+		sum + '=' (pass[i] + '0');
+		putchar(pass[i] + '0');
 		if ((2772 - sum) - '0' < 78)
 
 		{
