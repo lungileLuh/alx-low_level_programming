@@ -2,11 +2,11 @@
 #include <stdlib.h>
 /**
  * get_op_func - Selects the correct function to perform
- * 	the operation asked by the user.
+ * the operation asked by the user.
  * @s: The operator passed as argument.
  *
  * Return: A pointer to the function corresponding
- * 	to the operator given as a parameter.
+ * to the operator given as a parameter.
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -18,7 +18,7 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL},
 	};
-	
+
 	int i = 0;
 
 	while (ops[i].op != NULL && *(ops[i].op) != *s)
