@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * print_binary - prints the binary represantation of the number.
+ * print_binary - prints the binary similar of a number.
  * @n: unsigned long int.
  *
  * Return: no return.
