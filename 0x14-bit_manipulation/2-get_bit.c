@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * get_bit - returns the value of a bit at an index
- * @n: number long int input
- * @index: of the bit
+ * get_bit - returns the value of a bit at an index ina cardinal number
+ * @n: unsigned long int input
+ * @index: index of a bit
  *
  * Return: value of a bit
  */
