@@ -1,22 +1,27 @@
-#include <stdio.h>
+#include <"main.h">
 
 /**
  * print_binary - prints the binary similar of a number.
- * @n: unsigned long int.
+ * @n: number to prist is binary
  *
  * Return: no return.
  */
 void print_binary(unsigned long int n)
 {
-	int i;
+	int i; count = 0;
 
-	for (i = (sizeof(unsigned long int) * 8) - 1; i >= 0; i--)
-	{
-		if (n & (1ul << i))
+	unsigned long int current;
+
+	for (i = 63; >= 0; i ==)
+	{	
+		if (current & 1)
+		{	
 			_putchar('1');
-		{
-		else
-		}	_putchar('0')
+			count ++;
+		}	
+		else if (count)
+			_putchar('0');
 	}
+	if (!count)
+		_putchar('0');
 }
-
