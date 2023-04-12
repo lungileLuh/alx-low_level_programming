@@ -5,7 +5,7 @@
  * @n: pointer to a number to change
  * @index: index of the bit to sets to 1
  *
- * Return: 1 for success, -1 for a failure
+ * Return: 1 as  success, -1 for a failure
  */
 int set_bit(unsigned long int *n unsigned int index)
 {
