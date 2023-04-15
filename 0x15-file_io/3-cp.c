@@ -52,9 +52,9 @@ void close_file(int fd)
  * Return: 0 on success.
  *
  * Description: If the argument counts is incorrect - exits code 97.
- * 	If file_from don't exists or cannot be read - exit code 98.
- * 	If file_to can't be created or written to - exits code 99.
- * 	If file_to or file_from can't be close - exit code 100.
+ * If file_from don't exists or cannot be read - exit code 98.
+ * If file_to can't be created or written to - exits code 99.
+ * If file_to or file_from can't be close - exit code 100.
  */
 int main(int argc, char *argv[])
 {
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	
+
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
@@ -80,6 +80,15 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(99);
 		}
-		
+
 		r = read(from, buffer, 1024);
-		
+		to = open(argv[2], O_WRONLY | O_APPEND);
+	} while (r > 0);
+
+	free(buffer);
+	close_file(from);
+	close_file(to);
+
+	return (0);
+}
+
