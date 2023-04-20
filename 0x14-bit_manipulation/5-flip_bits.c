@@ -1,24 +1,24 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * flip_bit - counts the number of bite to change
- * to get from one number to the next
- * @n: first numbers
- * @n: second numbers
- *
- * Return: number of bite to change
+ * flip_bits - returns a number of bits you would need to
+ * flip to get from one number to the other.
+ * @n: is number.
+ * @m: is another.
+ * Return: number of bit to flip from one number to the other.
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int i, count = 0;
-	unsigned long int current;
-	unsigned long int exclusive = n ^ m;
+	unsigned long int num = n ^ m;
+	unsigned int pichu = 0;
+	int len = (sizeof(num) * 8);
 
-	for (i = 63; i >= 0; i--)
+	while (len >= 0)
 	{
-		current = exclusive >> i;
-		if (current & 1)
-			count++;
+		if (num & 1)
+			pichu++;
+		num = num >> 1;
+		len--;
 	}
-	return (count);
+	return (pichu);
 }
