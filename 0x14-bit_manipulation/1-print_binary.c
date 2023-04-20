@@ -1,26 +1,13 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_binary - print the binary equivalent of a decemal number
- * @n: numbers to print is in binary
+ * print_binary - print a binary representation of a number.
+ * @n: number to a print.
  */
 void print_binary(unsigned long int n)
 {
-	int i; count = 0
+	if (n > 1)
+		print_binary(n >> 1);
 
-	unsigned long int current;
-
-	for (i = 63; >= 0; i--)
-	{
-		current = n >> i;
-		if (current & 1)
-		{
-			_putchar('1');
-			count++;
-		}
-		else if (count)
-			_putchar('0');
-	}
-	if (!count)
-		_putchar('0');
+	_putchar((n & 1) + '0');
 }
