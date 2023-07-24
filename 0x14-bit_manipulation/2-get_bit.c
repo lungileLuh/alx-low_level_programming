@@ -10,32 +10,12 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index >= sizeof(unsigned long int) * 8)
-	{
-		/* Error: Index is out of range.*/
+	int bit_val;
+
+	if (index > 63)
 		return (-1);
-	}
-	(unsigned long int n,) mask = 1UL << index;
-	int bit_value = (n & mask) >> index;
 
-	return (bit_value);
-}
+	bit_val = (n >> index) & 1;
 
-int main(void)
-{
-	unsigned long int num = 42; /* Change this number to test different inputs */
-	unsigned int index = 3;    /* Change this index to test different positions */
-
-	int result = get_bit(num, index);
-
-	if (result != -1)
-	{
-		printf("Bit at index %u in %lu is: %d\n", index, num, result);
-	}
-	else
-	{
-		printf("Error: Index out of range!\n");
-	}
-
-	return (0);
+	return (bit_val);
 }
