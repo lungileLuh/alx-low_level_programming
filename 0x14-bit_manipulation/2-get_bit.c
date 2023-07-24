@@ -1,7 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
-
 #include <stdio.h>
+#define MAIN_H
 
 /**
  * get_bit - Returns the value of a bit at a given index.
@@ -17,8 +15,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		/* Error: Index is out of range.*/
 		return (-1);
 	}
-
-	unsigned long int mask = 1UL << index;
+	(unsigned long int n,) mask = 1UL << index;
 	int bit_value = (n & mask) >> index;
 
 	return (bit_value);
