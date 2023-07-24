@@ -1,6 +1,6 @@
-#ifndef MAIN_H
-#define MAIN_H
 
+
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -30,7 +30,6 @@ int main(void)
 	unsigned long int num2 = 17; /* Change this number to test different inputs */
 
 	unsigned int result = flip_bits(num1, num2);
-
 	printf("Number of bits to flip from %lu to %lu: %u\n", num1, num2, result);
 	return (0);
 }
